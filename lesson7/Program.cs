@@ -4,10 +4,12 @@
     {
         static void Main(string[] args)
         {
-            var inventory = new Inventory();
+            Inventory.PrintAllProductsInfo();
+            Console.WriteLine();
             int choice;
             while (true)
             {
+                Console.Clear();
                 Console.WriteLine("Выберите действие (введите 1 - 5)");
                 Console.WriteLine("1) Вывести информацию об инвентаре");
                 Console.WriteLine("2) Вывести цену всего инвентаря");
@@ -18,16 +20,20 @@
                 switch (choice)
                 {
                     case 1:
-                        inventory.PrintAllProductsInfo();
+                        Inventory.PrintAllProductsInfo();
+                        Console.WriteLine("Что бы продолжить введите что либо");
+                        Console.ReadLine();
                         break;
                     case 2:
-                        Console.WriteLine(inventory.SumOfProsucts());
+                        Console.WriteLine($"Сумма всех продуктов ранвна {Inventory.SumOfProsucts()}");
+                        Console.WriteLine("Что бы продолжить введите что либо");
+                        Console.ReadLine();
                         break;
                     case 3:
-                        inventory.AddProducts();
+                        Inventory.AddProducts();
                         break;
                     case 4:
-                        inventory.RemoveProduct();
+                        Inventory.RemoveProduct();
                         break;
                     case 5: return;
                     default:
