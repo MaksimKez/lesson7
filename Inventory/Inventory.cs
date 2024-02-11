@@ -10,8 +10,9 @@ namespace lesson7
     {
         private static List<Product> products = new List<Product>();
 
-        static Inventory()
+         public Inventory()
          {
+            var products = new List<Product>();
             while (true)
             {
                 Console.WriteLine();
@@ -20,14 +21,14 @@ namespace lesson7
                 for (int i = 0; i < numOfProducts; i++)
                 {
                     Console.WriteLine();
-                    products.Add(new Product());
+                    products.Append(new Product());
                     Console.WriteLine();
                 }
                 break;
             }
          } 
 
-        public static void AddProducts()
+        public void AddProducts()
         {
             while (true)
             {
@@ -44,7 +45,7 @@ namespace lesson7
             }
         }
 
-        public static void RemoveProduct()
+        public void RemoveProduct()
         {
             Console.WriteLine();
             PrintAllProductsInfo();
@@ -70,7 +71,7 @@ namespace lesson7
             }
         }
 
-        public static double SumOfProsucts()
+        public double SumOfProsucts()
         {
             double sum = 0;
 
@@ -81,7 +82,7 @@ namespace lesson7
             return sum;
         }
 
-        public static void PrintAllProductsInfo()
+        public void PrintAllProductsInfo()
         {
             int prodCounter = 1;
             foreach (Product product in products)

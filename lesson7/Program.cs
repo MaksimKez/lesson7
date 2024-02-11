@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Inventory.PrintAllProductsInfo();
+            var invent = new Inventory();
             Console.WriteLine();
             int choice;
             while (true)
@@ -20,20 +20,20 @@
                 switch (choice)
                 {
                     case 1:
-                        Inventory.PrintAllProductsInfo();
+                        invent.PrintAllProductsInfo();
                         Console.WriteLine("Что бы продолжить введите что либо");
                         Console.ReadLine();
                         break;
                     case 2:
-                        Console.WriteLine($"Сумма всех продуктов ранвна {Inventory.SumOfProsucts()}");
+                        Console.WriteLine($"Сумма всех продуктов ранвна {invent.SumOfProsucts()}");
                         Console.WriteLine("Что бы продолжить введите что либо");
                         Console.ReadLine();
                         break;
                     case 3:
-                        Inventory.AddProducts();
+                        invent.AddProducts();
                         break;
                     case 4:
-                        Inventory.RemoveProduct();
+                        invent.RemoveProduct();
                         break;
                     case 5: return;
                     default:
