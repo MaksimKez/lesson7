@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace lesson7
 {
-    internal class Inventory
+    public class Inventory
     {
         private static List<Product> products = new List<Product>();
 
