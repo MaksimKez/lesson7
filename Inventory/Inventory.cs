@@ -12,7 +12,6 @@ namespace lesson7
 
          public Inventory()
          {
-            var products = new List<Product>();
             while (true)
             {
                 Console.WriteLine();

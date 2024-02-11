@@ -11,4 +11,9 @@
     <PackageReference Include="System.Runtime" Version="4.3.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Inventory\Inventory.csproj" />
+    <ProjectReference Include="..\Product\Product.csproj" />
+  </ItemGroup>
+
 </Project>
